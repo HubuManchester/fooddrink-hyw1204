@@ -6,21 +6,21 @@
     <ScrollView>
         <ScrollView.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="{AppThemeBinding Light=#FFF1DA, Dark=#130F0C}" Offset="0.0" />
-                <GradientStop Color="{AppThemeBinding Light=#FFF9EF, Dark=#0F1711}" Offset="1.0" />
+                <GradientStop Color="{AppThemeBinding Light=#ECFFF4, Dark=#0B1510}" Offset="0.0" />
+                <GradientStop Color="{AppThemeBinding Light=#F8FFFB, Dark=#101D16}" Offset="1.0" />
             </LinearGradientBrush>
         </ScrollView.Background>
 
         <VerticalStackLayout Padding="22" Spacing="16">
-            <Border StrokeThickness="0" Padding="18" BackgroundColor="{AppThemeBinding Light=#FFFDF8, Dark=#1A1712}">
+            <Border StrokeThickness="0" Padding="18" BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1A1712}">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
+                    <RoundRectangle CornerRadius="24" />
                 </Border.StrokeShape>
                 <VerticalStackLayout Spacing="6">
                     <Label Text="Accessibility settings"
                            FontSize="28"
                            FontAttributes="Bold"
-                           TextColor="{AppThemeBinding Light=#3A2518, Dark=#FFF2DF}"
+                           TextColor="{AppThemeBinding Light=#124A2D, Dark=#D7FFE8}"
                            SemanticProperties.HeadingLevel="Level1" />
                     <Label Text="Large text takes effect immediately and remains active when switching pages."
                            FontSize="15"
@@ -29,18 +29,18 @@
             </Border>
 
             <Border StrokeThickness="1"
-                    Stroke="{AppThemeBinding Light=#F0D6B8, Dark=#3E3023}"
+                    Stroke="{AppThemeBinding Light=#D9EFE2, Dark=#3E3023}"
                     BackgroundColor="{AppThemeBinding Light=#FFFFFA, Dark=#1A1712}"
                     Padding="16">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
+                    <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
                 <VerticalStackLayout Spacing="16">
                     <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
                         <Label Text="Theme mode"
                                FontSize="17"
                                FontAttributes="Bold"
-                               TextColor="{AppThemeBinding Light=#D9472B, Dark=#FF9C7B}" />
+                               TextColor="{AppThemeBinding Light=#15915D, Dark=#7CE5B2}" />
                         <Picker x:Name="ThemePicker"
                                 Grid.Row="1"
                                 Title="Choose app theme"
@@ -75,17 +75,17 @@
             </Border>
 
             <Border StrokeThickness="0"
-                    BackgroundColor="{AppThemeBinding Light=#FFF0C9, Dark=#312316}"
+                    BackgroundColor="{AppThemeBinding Light=#E8F9EF, Dark=#193F2A}"
                     Padding="16">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
+                    <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
                 <VerticalStackLayout Spacing="8">
                     <Label x:Name="LargeTextPreviewTitle"
                            Text="Large text preview"
                            FontSize="20"
                            FontAttributes="Bold"
-                           TextColor="{AppThemeBinding Light=#A95517, Dark=#FFD18E}" />
+                           TextColor="{AppThemeBinding Light=#0F7A4D, Dark=#9CF0C1}" />
                     <Label x:Name="LargeTextPreviewBody"
                            Text="When enabled, this text and the rest of the page become visibly larger."
                            FontSize="15"

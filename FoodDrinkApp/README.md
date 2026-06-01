@@ -1,58 +1,309 @@
-# 食光营养助手
+# NutriBite
 
-食光营养助手是一个基于 .NET MAUI 的“食品与饮品”课程项目应用。应用可以记录食品和饮品，展示营养摘要，验证用户输入，并演示移动设备硬件功能。
+## Author
 
-## 主要功能
+Student:Qianle Cheng
 
-- 食品和饮品列表，支持搜索和详情页。
-- 添加记录表单，检查必填项和营养数值。
-- 使用相机拍摄食品照片并预览。
-- 使用定位记录用餐或购买地点。
-- 使用文字转语音朗读营养摘要和帮助内容。
-- 使用震动与触觉反馈提供操作提醒。
-- 支持主题切换和大字体模式。
-- 包含语义标签、屏幕阅读器播报和清晰的验证提示。
+Module: 6G6Z0014 – Developing a Cross-Platform Mobile App
 
-## 评分点覆盖
+Institution: Manchester Metropolitan University
 
-- UI/UX 与无障碍：XAML 页面、底部导航、一致的视觉风格、深色模式、语义描述和屏幕阅读器播报。
-- 移动硬件：相机、定位、文字转语音、震动和触觉反馈。
-- 功能完整性：列表、搜索、添加、详情、设置和硬件演示流程。
-- 验证与错误处理：必填项检查、数字检查、权限错误和硬件不可用提示。
-- 代码质量：模型和服务分离、命名清晰、可复用的目录服务，以及范围清晰的页面代码。
-- 部署：面向 Android 和 Windows 的 .NET MAUI 跨平台应用。
-- GitHub 使用：建议持续提交，例如 `添加食品列表`、`实现硬件页面`、`添加输入验证`。
+---
 
-## 运行方式
+# Project Overview
 
-使用安装了 .NET MAUI 工作负载的 Visual Studio 2022 打开 `FoodDrinkApp.csproj` 或 `FoodDrinkApp.sln`。
+NutriBite is a cross-platform food and nutrition management application developed using .NET MAUI and C#.
 
-推荐演示目标：
+The application allows users to browse food and drink records, search nutritional information, add new food entries, and explore food details. The project also demonstrates the integration of mobile hardware features including camera access, location services, text-to-speech functionality, and vibration feedback.
 
-- Android 模拟器
-- Windows Machine
+The application was designed with accessibility and usability in mind and includes support for dark mode and large-text accessibility settings.
 
-Windows 构建命令：
+---
 
-```powershell
-dotnet build .\FoodDrinkApp.csproj -f net9.0-windows10.0.19041.0
-```
+# Assessment Theme
 
-Android 构建命令：
+Food and Drink
 
-```powershell
-dotnet build .\FoodDrinkApp.csproj -f net9.0-android
-```
+This application was developed according to the coursework requirements for the "Food and Drink" theme and demonstrates:
 
-本项目通过 `Directory.Build.props` 将构建输出放到 `C:\MauiBuild\NutriTrack\`，用于规避 Android 打包工具在中文路径下的 `assets` 路径问题。
+* Cross-platform mobile development
+* Accessibility support
+* Mobile hardware integration
+* Validation and error handling
+* Responsive user interface design
 
-## 录屏演示清单
+---
 
-- 说明“食品与饮品”主题和“食光营养助手”的应用概念。
-- 展示搜索、详情页和添加新记录。
-- 演示不填必填项、输入非法数字时的验证提示。
-- 演示相机、定位、文字转语音、震动和触觉反馈。
-- 展示深色模式和大字体模式。
-- 展示关键代码文件：模型、服务、页面和 Android 权限配置。
-- 展示 Android 和 Windows 部署效果。
-- 展示 GitHub 提交历史和 README。
+# Features Implemented
+
+## Food Catalogue
+
+Users can:
+
+* Browse food records
+* View nutritional summaries
+* View calorie information
+* Search by food name, category, and tags
+
+---
+
+## Add Food Records
+
+Users can create new food entries by entering:
+
+* Name
+* Category
+* Description
+* Calories
+* Protein
+* Carbohydrates
+* Fat
+* Allergy information
+* Tags
+
+Input validation is applied to prevent invalid or incomplete records.
+
+---
+
+## Food Detail Page
+
+The detail page provides:
+
+* Full nutritional information
+* Macronutrient summary
+* Allergy information
+* Accessibility-friendly content presentation
+* Text-to-speech reading functionality
+
+---
+
+# Food Data Model
+
+Each food record contains:
+
+| Field        | Description             |
+| ------------ | ----------------------- |
+| Name         | Food name               |
+| Category     | Food category           |
+| Description  | Description of the food |
+| Calories     | Energy value (kcal)     |
+| Protein      | Protein content         |
+| Carbs        | Carbohydrate content    |
+| Fat          | Fat content             |
+| Allergy Note | Allergy information     |
+| Tags         | Search keywords         |
+
+---
+
+# Mobile Hardware Features
+
+The application demonstrates several mobile hardware capabilities.
+
+## Camera
+
+Users can capture food photographs using the device camera.
+
+## Location Services
+
+Users can obtain:
+
+* Country
+* City
+* Region
+* Coordinates
+
+using device geolocation services.
+
+## Text-to-Speech
+
+The application can read food information aloud using built-in speech synthesis.
+
+## Vibration and Haptic Feedback
+
+The application demonstrates device vibration and haptic feedback capabilities.
+
+---
+
+# Accessibility Features
+
+The application includes several accessibility enhancements.
+
+## Dark Mode
+
+Users can switch between:
+
+* Light Theme
+* Dark Theme
+* System Theme
+
+## Large Text Mode
+
+A large text option is provided to improve readability for users with visual impairments.
+
+## Accessible Content
+
+Food records provide accessibility-friendly summaries for assistive technologies.
+
+---
+
+# User Interface Design
+
+The user interface follows a modern card-based design approach.
+
+Key design principles include:
+
+* Consistent navigation
+* Clear typography
+* High colour contrast
+* Large touch targets
+* Rounded card layouts
+* Responsive design
+
+The application has been customised with a modern green visual theme to improve visual consistency and user experience.
+
+---
+
+# Validation and Error Handling
+
+Validation is implemented throughout the application to reduce user input errors.
+
+Examples include:
+
+* Required field validation
+* Numeric value validation
+* Empty input detection
+* User-friendly validation messages
+
+Error handling is used where hardware features and user interactions may fail.
+
+---
+
+# Technologies Used
+
+## Framework
+
+* .NET 9
+* .NET MAUI
+
+## Language
+
+* C#
+
+## User Interface
+
+* XAML
+
+## Data Handling
+
+* JSON Serialization
+* Local Mock Data Services
+
+# Project Structure
+
+FoodDrinkApp/
+
+├── Models/
+
+│ └── FoodItem.cs
+
+├── Services/
+
+│ ├── FoodCatalogService.cs
+
+│ ├── SpeechService.cs
+
+│ ├── AccessibilityService.cs
+
+│ └── MockApiConfig.cs
+
+├── MainPage.xaml
+
+├── AddItemPage.xaml
+
+├── FoodDetailPage.xaml
+
+├── HardwarePage.xaml
+
+├── SettingsPage.xaml
+
+├── AppShell.xaml
+
+└── MauiProgram.cs
+
+# Development Plan
+
+The initial development objectives were:
+
+* Create a food catalogue system
+* Allow users to search food items
+* Display nutritional information
+* Demonstrate mobile hardware integration
+* Implement accessibility features
+* Support multiple platforms using .NET MAUI
+
+Additional improvements included:
+
+* Modernised user interface
+* Green themed visual redesign
+* Improved accessibility support
+* Enhanced validation feedback
+
+# Installation
+
+## Requirements
+
+* Visual Studio 2022
+* .NET 9 SDK
+* .NET MAUI Workload
+
+## Running the Application
+
+1. Open the project in Visual Studio.
+2. Restore NuGet packages.
+3. Select a target platform.
+4. Build the solution.
+5. Run the application.
+
+Supported platforms:
+
+* Windows
+* Android
+* iOS
+* Mac Catalyst
+
+# Future Improvements
+
+Potential future enhancements include:
+
+* Cloud database integration
+* User authentication
+* Barcode scanning
+* Food image recognition
+* Nutrition recommendations
+* Synchronisation between devices
+* Online food database support
+
+# Screenshots
+
+Screenshots of the application can be added here:
+
+* Main Page
+* Add Food Page
+* Food Detail Page
+* Hardware Demonstration Page
+* Settings Page
+
+# GitHub Repository
+
+This project was developed using GitHub version control with regular commits throughout development.
+
+The repository contains:
+
+* Full source code
+* Project documentation
+* README documentation
+* Application resources
+
+# Conclusion
+
+NutriBite demonstrates the development of a modern cross-platform mobile application using .NET MAUI. The project combines food management functionality, accessibility support, and mobile hardware integration while maintaining a responsive and user-friendly interface.
