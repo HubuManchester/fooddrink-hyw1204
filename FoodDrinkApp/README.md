@@ -8,7 +8,6 @@ Module: 6G6Z0014 – Developing a Cross-Platform Mobile App
 
 Institution: Manchester Metropolitan University
 
----
 
 # Project Overview
 
@@ -17,8 +16,6 @@ NutriBite is a cross-platform food and nutrition management application develope
 The application allows users to browse food and drink records, search nutritional information, add new food entries, and explore food details. The project also demonstrates the integration of mobile hardware features including camera access, location services, text-to-speech functionality, and vibration feedback.
 
 The application was designed with accessibility and usability in mind and includes support for dark mode and large-text accessibility settings.
-
----
 
 # Assessment Theme
 
